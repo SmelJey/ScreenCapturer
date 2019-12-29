@@ -1,5 +1,4 @@
-package sample
-
+import Main
 import com.jfoenix.controls.JFXButton
 import javafx.geometry.Pos
 import javafx.scene.Scene

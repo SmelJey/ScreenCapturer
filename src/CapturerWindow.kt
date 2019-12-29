@@ -1,8 +1,5 @@
-package sample
-
 import ar.com.hjg.pngj.PngReader
 import ar.com.hjg.pngj.PngWriter
-import ar.com.hjg.pngj.chunks.PngChunk
 import ar.com.hjg.pngj.chunks.PngChunkTextVar
 import com.jfoenix.controls.JFXButton
 import com.jfoenix.controls.JFXColorPicker
@@ -14,7 +11,6 @@ import javafx.scene.SnapshotParameters
 import javafx.scene.canvas.Canvas
 import javafx.scene.canvas.GraphicsContext
 import javafx.scene.control.Button
-import javafx.scene.control.Label
 import javafx.scene.control.Tooltip
 import javafx.scene.effect.Light
 import javafx.scene.image.Image
@@ -36,7 +32,6 @@ import java.io.ByteArrayInputStream
 import java.io.ByteArrayOutputStream
 import java.io.File
 import javax.imageio.ImageIO
-import javax.tools.Tool
 import kotlin.math.abs
 import kotlin.math.round
 

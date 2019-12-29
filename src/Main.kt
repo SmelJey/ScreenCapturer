@@ -1,5 +1,3 @@
-package sample
-
 import com.jfoenix.controls.*
 import javafx.application.Application
 import javafx.application.Platform
@@ -158,6 +156,7 @@ class Main : Application() {
             pw.flush()
             pw.close()
             primaryStage.close()
+            exitProcess(0)
         }
         primaryStage.hide()
         initMainWindow()
