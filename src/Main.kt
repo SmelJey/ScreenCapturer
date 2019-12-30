@@ -149,7 +149,6 @@ class Main : Application() {
         mainWindow?.icons?.add(Image("file:icon.png"))
         mainWindow!!.setOnCloseRequest {
             editorWindow?.close()
-            editorWindow?.successWindow?.close()
 
             val pw = PrintWriter("settings.json")
             pw.write(settings.toJSONString())
