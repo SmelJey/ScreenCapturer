@@ -50,14 +50,14 @@ class CapturerWindow(inputImg : Image) : Stage() {
 
     val selectionRect = Rectangle(0.0, 0.0, canvasWidth, canvasHeight)
 
-    var successWindow: SuccessWindow? = null
+    private var successWindow: SuccessWindow? = null
 
     private fun initSuccessWindow(file : File) {
         if (successWindow != null && successWindow!!.isShowing)
             successWindow!!.hide()
         successWindow = SuccessWindow(file)
         successWindow!!.show(this, this.width - 125.0,
-                this.height - 200.0)
+                this.height - 235.0)
     }
 
     fun drawSelectionRect(selectionRect : Rectangle, gc : GraphicsContext, sgc : GraphicsContext){

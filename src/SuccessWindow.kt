@@ -3,13 +3,14 @@ import javafx.geometry.Pos
 import javafx.scene.control.Label
 import javafx.scene.image.ImageView
 import javafx.scene.layout.*
-import javafx.scene.paint.Color
 import javafx.stage.Popup
 import java.awt.Desktop
 import java.io.File
 
 class SuccessWindow(file : File) : Popup() {
-    val root = object : VBox() {
+    val closeBtn = JFXButton("Close")
+
+    private val root = object : VBox() {
         init {
             alignment = Pos.CENTER
             children.add(Label("ScreenCapturer"))
@@ -20,14 +21,15 @@ class SuccessWindow(file : File) : Popup() {
             openBtn.setOnAction {
                 Desktop.getDesktop().open(file.parentFile)
             }
-            children.add(openBtn)
-
+            children.addAll(openBtn, closeBtn)
         }
     }
 
     init {
-
-        root.style = "-fx-background-color: grey;\n" +
+        closeBtn.setOnAction {
+            this.hide()
+        }
+        root.style = "-fx-background-color: lightgrey;\n" +
                 "    -fx-padding: 10;\n" +
                 "    -fx-border-color: black; \n" +
                 "    -fx-border-width: 2;\n" +
